@@ -1,1 +1,103 @@
-Hello World
+<!DOCTYPE html>
+<html ng-app="parentCategoriesApp" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tomandhannah</title>
+
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Headline font -->
+	<link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style>
+	* {font-family: 'Sue Ellen Francisco', cursive;}
+	</style>
+  </head>
+  <body>
+       
+    <!-- Main jumbotron -->
+    <a href="/" style="text-decoration: none"><div class="jumbotron">
+      <div class="container">
+        <h1>from Tom and Hannah</h1>
+        <p>Our little bit of space on the web to link to some of the things we like.</p>       
+      </div>
+    </div>	
+	</a>	
+    <div class="container"> 
+		<div ng-view></div>
+		<hr>
+		<footer>
+			<p>&copy; Hannah Griffin 2014</p>
+		</footer>
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!-- angular.js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js"></script>
+	<script>
+	var app = angular.module('parentCategoriesApp', ['ngRoute']);
+	
+	app.config(function($routeProvider) {
+		$routeProvider.when('/',
+		{
+			controller: 'ParentCategoriesController',
+			templateUrl: '/app/views/parentCategory.html'
+		})
+		.when('/stuff/:parentCategory',
+		{
+			controller: 'StuffController',
+			templateUrl: '/app/views/stuff.html'
+		})
+	});
+		
+	app.controller('ParentCategoriesController', function($scope, parentCategoriesFactory) {
+		$scope.parentCategories = null;
+		
+		function init(){
+			parentCategoriesFactory.getParentCategories().success(function(cats) {
+				$scope.parentCategories = cats;				
+			});
+		}
+		
+		init();
+	});
+	
+	app.controller('StuffController', function($scope, $routeParams, parentCategoriesFactory){
+		$scope.parentCategory = $routeParams.parentCategory;
+		
+		$scope.parentCategories = null;
+		
+		function init(){
+			parentCategoriesFactory.getParentCategories().success(function(cats) {
+				$scope.parentCategories = cats;				
+			});
+		}
+		
+		init();
+	});
+	
+	app.factory('parentCategoriesFactory', function($http) {
+		var factory = {};
+		factory.getParentCategories = function() {
+			return $http.get('parent-categories.json');
+			};
+		return factory;
+	});
+	</script>
+	
+  </body>
+</html>

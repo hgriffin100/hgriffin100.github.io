@@ -1,0 +1,43 @@
+[ 
+	{ 	"parentCategory": "Code", 
+		"summary": "Useful code, libraries and techie tips.", 
+		"glyphiconName": "glyphicon glyphicon-download-alt",
+		"favourites": [
+			{	"url": "http://getbootstrap.com/", "displayText": "Bootstrap" },
+			{ 	"url": "https://angularjs.org/", "displayText": "AngularJS"	}
+		]},
+	{ 	"parentCategory": "Eat", 
+		"summary": "Recipes and veg we've grown",
+		"glyphiconName": "glyphicon glyphicon-cutlery",
+		"favourites": [
+			{	"url": "http://www.bbcgoodfood.com/", "displayText": "BBC Good Food" },
+			{ 	"url": "http://www.bbc.co.uk/food/recipes/", "displayText": "BBC Food Recipes"	}
+		]},
+	{ 	"parentCategory": "Sleep", 
+		"summary": "Hotels, campsites and B&Bs we've visited that we loved", 
+		"glyphiconName": "glyphicon glyphicon-plane",
+		"favourites": [
+			{	"url": "http://www.nethergongnurseries.co.uk/camping.php", "displayText": "Camping at Nethergong (Canterbury, UK)" },
+			{ 	"url": "http://lingsmeadow.co.uk/", "displayText": "Ling's Meadow (Norfolk, UK)"	}
+		]},
+	{ 	"parentCategory": "Work",
+		"summary": "STFC", 
+		"glyphiconName": "glyphicon glyphicon-globe",
+		"favourites": [
+			{	"url": "http://www.stfc.ac.uk", "displayText": "Science and Technology Facilities Council" },
+			{ 	"url": "http://www.isis.stfc.ac.uk", "displayText": "ISIS Neutron and Muon Source"	}
+		]},
+	{ 	"parentCategory": "Support", 
+		"summary": "Shelter, Bumblebee Conservation Trust",
+		"glyphiconName": "glyphicon glyphicon-heart-empty",
+		"favourites": [
+			{	"url": "http://bumblebeeconservation.org", "displayText": "Bumblebee Conservation Trust" },
+			{ 	"url": "https://www.shelter.org.uk/", "displayText": "Shelter"	}
+		]},
+	{ 	"parentCategory": "Play", 
+		"summary": "Walking, skiing...", 
+		"glyphiconName": "glyphicon glyphicon-tree-conifer",
+		"favourites": [
+			{	"url": "http://thamespath2013.tumblr.com", "displayText": "Thames Path 2013" }			
+		]}
+]

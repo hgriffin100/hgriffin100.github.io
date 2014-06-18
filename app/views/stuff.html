@@ -1,0 +1,11 @@
+<div>		
+	<div class="row" ng-repeat="cat in parentCategories" ng-show="cat.parentCategory=='{{ parentCategory }}'">
+		<h2>{{ parentCategory }}</h2>
+		
+			<div class="row" ng-repeat="fav in cat.favourites">
+				<div class="col-md-4">
+					<h4><a href='{{ fav.url }}'>{{ fav.displayText }}</a></h4>
+				</div>
+			</div>		
+	</div>
+</div>
