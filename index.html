@@ -11,29 +11,32 @@
 
 	<!-- Headline font -->
 	<link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
-	
+
+  <!-- Content font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<style>
-	* {font-family: 'Sue Ellen Francisco', cursive;}
-	</style>
+
+  <!-- Main custom style -->
+  <link href="shared.css" rel="stylesheet">
+
   </head>
   <body>
-       
+
     <!-- Main jumbotron -->
     <a href="/" style="text-decoration: none"><div class="jumbotron">
       <div class="container">
         <h1>from Tom and Hannah</h1>
-        <p>Our little bit of space on the web to link to some of the things we like.</p>       
+        <p>Our little bit of space on the web to link to some of the things we like.</p>
       </div>
-    </div>	
-	</a>	
-    <div class="container"> 
+    </div>
+	</a>
+    <div class="container">
 		<div ng-view></div>
 		<hr>
 		<footer>
@@ -50,7 +53,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js"></script>
 	<script>
 	var app = angular.module('parentCategoriesApp', ['ngRoute']);
-	
+
 	app.config(function($routeProvider) {
 		$routeProvider.when('/',
 		{
@@ -63,33 +66,33 @@
 			templateUrl: '/app/views/stuff.html'
 		})
 	});
-		
+
 	app.controller('ParentCategoriesController', function($scope, parentCategoriesFactory) {
 		$scope.parentCategories = null;
-		
+
 		function init(){
 			parentCategoriesFactory.getParentCategories().success(function(cats) {
-				$scope.parentCategories = cats;				
+				$scope.parentCategories = cats;
 			});
 		}
-		
+
 		init();
 	});
-	
+
 	app.controller('StuffController', function($scope, $routeParams, parentCategoriesFactory){
 		$scope.parentCategory = $routeParams.parentCategory;
-		
+
 		$scope.parentCategories = null;
-		
+
 		function init(){
 			parentCategoriesFactory.getParentCategories().success(function(cats) {
-				$scope.parentCategories = cats;				
+				$scope.parentCategories = cats;
 			});
 		}
-		
+
 		init();
 	});
-	
+
 	app.factory('parentCategoriesFactory', function($http) {
 		var factory = {};
 		factory.getParentCategories = function() {
@@ -98,6 +101,6 @@
 		return factory;
 	});
 	</script>
-	
+
   </body>
 </html>
