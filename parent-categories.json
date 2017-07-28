@@ -1,18 +1,10 @@
 [
-	{ 	"parentCategory": "3rd Party Libraries",
-		"summary": "Useful code-related things made by others.",
-		"glyphiconName": "glyphicon glyphicon-download-alt",
-		"favourites": [
-			{	"url": "http://getbootstrap.com", "displayText": "Bootstrap", "image": "", "summary": "'A sleek, intuitive, and powerful mobile first front-end framework'" },
-			{ "url": "http://angularjs.org", "displayText": "AngularJS", "image": "", "summary": "'Superheroic JavaScript MVW Framework'"	},
-			{ "url": "http://jekyllrb.com", "displayText": "Jekyll", "image": "", "summary": "Turns plain text into static websites and blogs in seconds."	}
-		]},
 	{ 	"parentCategory": "Eat",
-		"summary": "Recipes and veg we've grown",
+		"summary": "Feeling hungry?",
 		"glyphiconName": "glyphicon glyphicon-cutlery",
 		"favourites": [
-			{	"url": "http://www.bbcgoodfood.com", "displayText": "BBC Good Food", "image": "", "summary": "" },
-			{ "url": "http://www.bbc.co.uk/food/recipes", "displayText": "BBC Food Recipes", "image": "", "summary": ""	}
+			{	"url": "http://www.bbcgoodfood.com", "displayText": "BBC Good Food", "image": "", "summary": "Tasty and reliable recipes that have been tested and tested again." },
+			{ "url": "http://www.bbc.co.uk/food/recipes", "displayText": "BBC Food Recipes", "image": "", "summary": "Recipes from some of the best cookery shows on TV (IMHO)"	}
 		]},
 	{ 	"parentCategory": "Sleep",
 		"summary": "Hotels, campsites and B&Bs we've visited that we loved",
@@ -25,8 +17,8 @@
 		"summary": "STFC",
 		"glyphiconName": "glyphicon glyphicon-globe",
 		"favourites": [
-			{	"url": "http://www.stfc.ac.uk", "displayText": "Science and Technology Facilities Council", "image": "", "summary": "" },
-			{ "url": "http://www.isis.stfc.ac.uk", "displayText": "ISIS Neutron and Muon Source", "image": "", "summary": ""	}
+			{	"url": "http://www.stfc.ac.uk", "displayText": "Science and Technology Facilities Council", "image": "", "summary": "STFC runs really big scientific equipment that industry and researchers can use to make the world a better place for you and me. It also funds researchers in universities" },
+			{ "url": "http://www.isis.stfc.ac.uk", "displayText": "ISIS Neutron and Muon Source", "image": "", "summary": "Over 30 big instruments that use tiny particles to see inside stuff so we can make things better"	}
 		]},
 	{ 	"parentCategory": "Support",
 		"summary": "Shelter, Bumblebee Conservation Trust",
@@ -37,12 +29,18 @@
 			{ "url": "http://www.amnesty.org.uk", "displayText": "Amnesty International UK", "image": "", "summary": "Standing up for humanity and human rights"	},
 			{ "url": "http://www.secularism.org.uk", "displayText": "National Secular Society", "image": "", "summary": "It's about fairness, freedom and human rights"	},
 			{ "url": "http://www.girlguiding.org.uk", "displayText": "Girlguiding UK", "image": "", "summary": "The leading charity for girls and young women in the UK"	},
-	    { "url": "http://libdems.org.uk", "displayText": "Liberal Democrats", "image": "", "summary": "I'm voting to change Britain's future on Thursday 8th June"	}
+	    { "url": "https://humanism.org.uk", "displayText": "Humanism UK", "image": "", "summary": "Non-religious? Are you a humanist too?"	}
 		]},
 	{ 	"parentCategory": "Play",
 		"summary": "Walking, skiing...",
 		"glyphiconName": "glyphicon glyphicon-tree-conifer",
 		"favourites": [
 			{	"url": "http://thamespath2013.tumblr.com", "displayText": "Thames Path 2013", "image": "", "summary": "" }
+		]},
+	{ 	"parentCategory": "Blogs",
+		"summary": "Notes from us",
+		"glyphiconName": "glyphicon glyphicon-pencil",
+		"favourites": [
+			{	"url": "http://www.tomandhannah.co.uk/wandering-jekyll", "displayText": "Hannah's Blog", "image": "", "summary": "Thoughts from home and 'the lab'" }
 		]}
 ]
