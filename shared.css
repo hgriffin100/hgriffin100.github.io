@@ -1,0 +1,17 @@
+h1 {font-family: 'Sue Ellen Francisco', cursive;}
+* {font-family: 'Open Sans', sans-serif;}
+
+
+img.thumbnail {
+    width: 150px;
+    border: none;
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.thumbnail {
+    padding: 2px;
+}
+.caption {
+    float: left;
+}

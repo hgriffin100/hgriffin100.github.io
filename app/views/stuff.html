@@ -1,11 +1,46 @@
-<div>		
+<div>
 	<div class="row" ng-repeat="cat in parentCategories" ng-show="cat.parentCategory=='{{ parentCategory }}'">
 		<h2>{{ parentCategory }}</h2>
-		
-			<div class="row" ng-repeat="fav in cat.favourites">
-				<div class="col-md-4">
-					<h4><a href='{{ fav.url }}'>{{ fav.displayText }}</a></h4>
+		<div class="row" ng-repeat="fav in cat.favourites" ng-switch="" on="$index % 3">
+			<div class="col-md-4" ng-switch-when="0">
+				<div class="row">
+					<div class="col-md-6">
+						<span ng-if="cat.favourites[$index].url != null" class="ng-scope">
+							<img class="thumbnail" src='https://www.easy-thumb.net/thumb?url={{ cat.favourites[$index].url }}' alt='{{ cat.favourites[$index].displayText }}'>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<h4><a href='{{ cat.favourites[$index].url }}'>{{ cat.favourites[$index].displayText }}</a></h4>
+						<p>{{cat.favourites[$index].summary}}</p>
+					</div>
 				</div>
-			</div>		
+			</div>
+			<div class="col-md-4" ng-switch-when="0">
+				<div class="row">
+					<div class="col-md-6">
+						<span ng-if="cat.favourites[$index+1].url != null" class="ng-scope">
+							<img class="thumbnail" src='https://www.easy-thumb.net/thumb?url={{ cat.favourites[$index+1].url }}' alt='{{ cat.favourites[$index+1].displayText }}'>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<h4><a href='{{ cat.favourites[$index+1].url }}'>{{ cat.favourites[$index+1].displayText }}</a></h4>
+						<p>{{cat.favourites[$index+1].summary}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4" ng-switch-when="0">
+				<div class="row">
+					<div class="col-md-6">
+						<span ng-if="cat.favourites[$index+2].url != null" class="ng-scope">
+							<img class="thumbnail" src='https://www.easy-thumb.net/thumb?url={{ cat.favourites[$index+2].url }}' alt='{{ cat.favourites[$index+2].displayText }}'>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<h4><a href='{{ cat.favourites[$index+2].url }}'>{{ cat.favourites[$index+2].displayText }}</a></h4>
+						<p>{{cat.favourites[$index+2].summary}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
